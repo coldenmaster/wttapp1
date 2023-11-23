@@ -1,4 +1,5 @@
 from . import __version__ as app_version
+from frappe import _
 
 app_name = "wttapp1"
 app_title = "Wttapp1"
@@ -6,6 +7,37 @@ app_publisher = "Wangtao"
 app_description = "Library Management System"
 app_email = "15894368@qq.com"
 app_license = "MIT"
+
+
+test_string = "value"
+test_list = ["value"]
+test_dict = {
+    "key": "value"
+}
+
+sounds = [
+	{"name": "email", "src": "/assets/frappe/sounds/email.mp3", "volume": 0.8},
+	{"name": "submit", "src": "/assets/frappe/sounds/submit.mp3", "volume": 0.8},
+	{"name": "cancel", "src": "/assets/frappe/sounds/cancel.mp3", "volume": 0.8},
+	{"name": "delete", "src": "/assets/frappe/sounds/delete.mp3", "volume": 0.75},
+	{"name": "click", "src": "/assets/frappe/sounds/click.mp3", "volume": 0.75},
+	{"name": "error", "src": "/assets/frappe/sounds/error.mp3", "volume": 0.8},
+	{"name": "alert", "src": "/assets/frappe/sounds/alert.mp3", "volume": 0.9},
+	# {"name": "chime", "src": "/assets/frappe/sounds/chime.mp3"},
+]
+
+standard_portal_menu_items = [
+# portal_menu_items = [
+	{"title": _("Projects2"), "route": "/article", "reference_doctype": "Article"},
+	# {
+	# 	"title": _("Request for Quotations"),
+	# 	"route": "/rfq",
+	# 	"reference_doctype": "Request for Quotation",
+	# 	"role": "Supplier",
+	# },
+    {"title": _("Article"), "route": "/article", "reference_doctype": "Library Member"},
+
+]
 
 # Includes in <head>
 # ------------------

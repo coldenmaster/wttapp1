@@ -1,0 +1,103 @@
+{
+ "actions": [
+  {
+   "action": "wttapp1.wttapp1.doctype.mach_check.mach_check.action1",
+   "action_type": "Server Action",
+   "label": "Action1"
+  },
+  {
+   "action": "article",
+   "action_type": "Route",
+   "label": "Rout1"
+  },
+  {
+   "action": "wttapp1.wtt_api.action1",
+   "action_type": "Server Action",
+   "label": "A2"
+  }
+ ],
+ "allow_rename": 1,
+ "autoname": "field:machine",
+ "creation": "2023-10-20 17:20:45.347789",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine",
+  "department",
+  "person",
+  "status",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine",
+   "fieldtype": "Data",
+   "label": "Machine",
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "person",
+   "fieldtype": "Link",
+   "label": "Person",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\u5b8c\u597d\n\u9700\u7ef4\u4fee\n\u5c01\u5b58"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [
+  {
+   "link_doctype": "Article",
+   "link_fieldname": "article_name"
+  },
+  {
+   "link_doctype": "Library Member",
+   "link_fieldname": "full_name"
+  },
+  {
+   "link_doctype": "Library Membership",
+   "link_fieldname": "full_name"
+  }
+ ],
+ "modified": "2023-10-21 12:02:06.431354",
+ "modified_by": "Administrator",
+ "module": "Wttapp1",
+ "name": "Mach Check",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
